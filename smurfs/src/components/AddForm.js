@@ -34,7 +34,7 @@ render() {
     return (
         <div>
             <h2> Add a Smurf! </h2>
-            <form>
+            <form onSubmit={this.addSmurf}>
                 <input
                 type='text'
                 placeholder='name'
@@ -59,7 +59,7 @@ render() {
                 value={this.state.smurf.height}
                 /> 
 
-                <button> Add yo smurf! </button>
+                <button onClick={this.addSmurf} > Add yo smurf! </button>
             </form>
         </div>
     )
