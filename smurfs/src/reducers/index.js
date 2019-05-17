@@ -69,6 +69,13 @@ const reducer = (state = initialState, action) => {
       error: ''
     }
 
+    case ADD_SMURF_FAILURE:
+    return {
+      ...state,
+      addingSmurf: false,
+      error: action.payload
+    }
+
     default:
     return state;
   }

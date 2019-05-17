@@ -27,22 +27,16 @@ addSmurf = e => {
 
     this.props.addSmurf(this.state.smurf);
 
-    this.setState({
-        smurf: {
-            name: '',
-            age: '',
-            height: ''
-        } 
-    })
-
 }
 
 render() {
+    console.log(this.state.smurf)
     return (
         <div>
             <h2> Add a Smurf! </h2>
             <form>
                 <input
+                type='text'
                 placeholder='name'
                 name='name'
                 onChange={this.handleChanges}
@@ -50,6 +44,7 @@ render() {
                  />
 
                 <input
+                type='number'
                 placeholder='age'
                 name='age'
                 onChange={this.handleChanges}
@@ -57,6 +52,7 @@ render() {
                  /> 
 
                 <input 
+                type='number'
                 placeholder='height'
                 name='height'
                 onChange={this.handleChanges}
